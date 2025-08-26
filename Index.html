@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Beautiful Dr. Anushka 🌹</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(45deg, #8B0000, #DC143C, #B22222, #CD5C5C);
+            background-size: 400% 400%;
+            animation: gradientShift 6s ease infinite;
+            min-height: 100vh;
+            font-family: 'Georgia', serif;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .main-title {
+            color: #FFE4E6;
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            animation: titleGlow 3s ease-in-out infinite alternate;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .title-hearts {
+            font-size: 2rem;
+            color: #FF69B4;
+            animation: heartFloat 2s ease-in-out infinite;
+            margin: 10px 0;
+        }
+
+        @keyframes heartFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes titleGlow {
+            from { text-shadow: 3px 3px 6px rgba(0,0,0,0.5), 0 0 20px rgba(255,182,193,0.3); }
+            to { text-shadow: 3px 3px 6px rgba(0,0,0,0.5), 0 0 30px rgba(255,182,193,0.8); }
+        }
+
+        .subtitle {
+            color: #FFCCCB;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .roses-garden {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+            margin: 40px 0;
+        }
+
+        .rose {
+            font-size: 5rem;
+            text-align: center;
+            animation: floatRose 4s ease-in-out infinite;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(0 0 10px rgba(220,20,60,0.6));
+        }
+
+        .rose:nth-child(odd) {
+            animation-delay: -2s;
+        }
+
+        .rose:nth-child(even) {
+            animation-delay: -1s;
+        }
+
+        .rose:hover {
+            transform: scale(1.3) rotate(15deg);
+            filter: drop-shadow(0 0 20px rgba(255,20,60,0.9));
+        }
+
+        @keyframes floatRose {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .love-message {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 30px;
+            margin: 40px 0;
+            max-width: 600px;
+            text-align: center;
+            border: 2px solid rgba(255,182,193,0.3);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+
+        .love-message p {
+            color: #FFE4E6;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+            margin-bottom: 15px;
+        }
+
+        .floating-petals {
+            position: fixed;
+            top: -10px;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .petal {
+            position: absolute;
+            color: #FF69B4;
+            font-size: 2rem;
+            animation: fallPetal 8s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes fallPetal {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .heart-pulse {
+            font-size: 3rem;
+            color: #FF1493;
+            animation: heartbeat 1.5s ease-in-out infinite;
+            margin: 20px;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .special-message {
+            background: linear-gradient(45deg, rgba(220,20,60,0.8), rgba(255,20,147,0.8));
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin: 30px 0;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            animation: messageShine 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes messageShine {
+            from { box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+            to { box-shadow: 0 6px 30px rgba(255,20,147,0.5); }
+        }
+
+        .floating-words {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 500;
+        }
+
+        .love-word {
+            position: absolute;
+            color: rgba(255, 182, 193, 0.8);
+            font-weight: bold;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: floatWord 10s linear infinite;
+        }
+
+        @keyframes floatWord {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+            .main-title {
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .rose {
+                font-size: 3.5rem;
+            }
+            
+            .roses-garden {
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-petals" id="petals"></div>
+    
+    <div class="container">
+        <h1 class="main-title">✨ DR. ANUSHKA ✨</h1>
+        <div class="title-hearts">💔 I'm So Sorry, Please Forgive Me 💔</div>
+        
+        <p class="subtitle">My Deepest Apologies With Every Red Rose</p>
+        
+        <div class="heart-pulse">💖</div>
+        
+        <div class="roses-garden">
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+        </div>
+        
+        <div class="special-message">
+            I Made A Terrible Mistake - Please Forgive Me, Dr. Anushka 🌹💔
+        </div>
+        
+        <div class="love-message">
+            <p>💔 My Dearest Dr. Anushka, I'm So Sorry 💔</p>
+            <p>I know I've hurt you deeply, and I can't express how much pain that brings to my heart. There's no excuse for my mistake, and I take full responsibility for disappointing you when you deserved so much better.</p>
+            <p>Each red rose here represents not just my affection for you, but my sincere, heartfelt apology. I know words feel empty right now, but please know that I'm genuinely sorry from the depths of my soul.</p>
+            <p>You are the most important person in my world, and seeing you angry because of my actions breaks my heart into pieces. I promise to do everything in my power to make this right and earn back your trust.</p>
+            <p>Please don't give up on me. I'm truly, deeply sorry, Dr. Anushka. 🌹</p>
+            <p>💔 With all my regret and hope for forgiveness 💔</p>
+        </div>
+        
+        <div class="heart-pulse">💔 Please Forgive Me - You Mean Everything To Me 💔</div>
+    </div>
+
+    <!-- Add floating love words -->
+    <div class="floating-words" id="loveWords"></div>
+
+    <script>
+        // Create falling petals animation
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.innerHTML = '🌸';
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            petal.style.opacity = Math.random();
+            
+            document.getElementById('petals').appendChild(petal);
+            
+            setTimeout(() => {
+                petal.remove();
+            }, 8000);
+        }
+
+        // Create petals every 800ms
+        setInterval(createPetal, 800);
+
+        // Create floating love words
+        const loveWords = ['Sorry', 'Forgive Me', 'I\'m Sorry', 'Please', 'My Mistake', 'Regret', 'Apologize', 'Wrong', 'Forgiveness', 'Second Chance', 'Please Don\'t Leave', 'I\'m Truly Sorry'];
+        
+        function createLoveWord() {
+            const word = document.createElement('div');
+            word.className = 'love-word';
+            word.innerHTML = loveWords[Math.floor(Math.random() * loveWords.length)];
+            word.style.left = Math.random() * 90 + '%';
+            word.style.fontSize = (Math.random() * 20 + 16) + 'px';
+            word.style.animationDuration = (Math.random() * 3 + 8) + 's';
+            word.style.color = 'rgba(255, 182, 193, 0.9)';
+            
+            document.getElementById('loveWords').appendChild(word);
+            
+            setTimeout(() => {
+                word.remove();
+            }, 11000);
+        }
+
+        // Create love words every 3 seconds
+        setInterval(createLoveWord, 3000);
+
+        // Add click interaction to roses
+        document.querySelectorAll('.rose').forEach(rose => {
+            rose.addEventListener('click', function() {
+                const originalContent = this.innerHTML;
+                
+                // Change to "Sorry" with animation
+                this.style.animation = 'none';
+                this.style.transform = 'scale(1.5) rotate(360deg)';
+                
+                const sorryMessages = ['I\'m So Sorry', 'Please Forgive Me', 'My Deepest Apologies', 'I Was Wrong', 'Sorry Dr. Anushka', 'Please Don\'t Hate Me'];
+                this.innerHTML = sorryMessages[Math.floor(Math.random() * sorryMessages.length)];
+                
+                this.style.color = '#FFE4E6';
+                this.style.fontSize = '1.2rem';
+                this.style.fontWeight = 'bold';
+                this.style.textShadow = '2px 2px 4px rgba(0,0,0,0.8)';
+                
+                // Add crying hearts around the clicked rose
+                const heartsContainer = document.createElement('div');
+                heartsContainer.style.position = 'absolute';
+                heartsContainer.style.top = '50%';
+                heartsContainer.style.left = '50%';
+                heartsContainer.style.transform = 'translate(-50%, -50%)';
+                heartsContainer.style.pointerEvents = 'none';
+                heartsContainer.innerHTML = '💔😢💔😢💔';
+                heartsContainer.style.fontSize = '1rem';
+                heartsContainer.style.animation = 'fadeOut 3s ease-out forwards';
+                this.style.position = 'relative';
+                this.appendChild(heartsContainer);
+                
+                // Return to rose after 3 seconds
+                setTimeout(() => {
+                    this.innerHTML = originalContent;
+                    this.style.color = '';
+                    this.style.fontSize = '5rem';
+                    this.style.fontWeight = '';
+                    this.style.textShadow = '';
+                    this.style.animation = '';
+                    this.style.transform = '';
+                    this.style.position = '';
+                }, 3000);
+            });
+        });
+
+        // Add sparkle effect on mouse move
+        document.addEventListener('mousemove', function(e) {
+            if (Math.random() < 0.1) {
+                const sparkle = document.createElement('div');
+                sparkle.innerHTML = '✨';
+                sparkle.style.position = 'fixed';
+                sparkle.style.left = e.clientX + 'px';
+                sparkle.style.top = e.clientY + 'px';
+                sparkle.style.pointerEvents = 'none';
+                sparkle.style.fontSize = '20px';
+                sparkle.style.animation = 'fadeOut 1s ease-out forwards';
+                document.body.appendChild(sparkle);
+                
+                setTimeout(() => sparkle.remove(), 1000);
+            }
+        });
+
+        // Add fadeOut animation for sparkles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeOut {
+                0% { opacity: 1; transform: scale(1); }
+                100% { opacity: 0; transform: scale(0.5) translateY(-30px); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
